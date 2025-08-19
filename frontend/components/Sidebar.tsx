@@ -15,7 +15,7 @@ export default function Sidebar() {
 
   return (
     <aside
-      className={`absolute top-0 left-0 bg-gray-800 text-white h-screen transition-all duration-300 z-20 ${
+      className={`absolute top-0 left-0 bg-cfg text-white h-screen transition-all duration-300 z-20 ${
         isOpen ? "w-60" : "w-16"
       }`}
     >
@@ -25,10 +25,10 @@ export default function Sidebar() {
           onClick={() => setIsOpen(!isOpen)}
         >
           <img src="/logo.png" alt="englist.io" className="w-12 object-cover" />
-          {isOpen && <span className="text-xl mx-3">Englist.io</span>}
+          {isOpen && <span className="text-3xl font-head">Englist.io</span>}
         </button>
         <div className="w-full h-[2px] bg-gray-600 my-4" />
-        <div className="mt-4 space-y-4 font-[Chivo] font-semibold">
+        <div className="mt-4 space-y-4">
           {routes.map((route) => (
             <Link
               key={route.path}

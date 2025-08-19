@@ -1,18 +1,26 @@
 import type { Metadata } from "next";
-import { Chivo, Dela_Gothic_One } from "next/font/google";
+
+import { Rubik, Roboto_Slab, Anton_SC } from 'next/font/google'
+
 import "./globals.css";
 
-const ChivoFont = Chivo({
-  variable: "--font-chivo",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin"],
-});
+const sans = Rubik({
+  weight: ["500", "700"],
+  variable: "--font-sans",
+  subsets: ["latin"]
+})
 
-const DelaFont = Dela_Gothic_One({
-  variable: "--font-dela",
-  weight: ["400"],
-  subsets: ["latin"],
-});
+const serif = Roboto_Slab({
+  weight: "400",
+  variable: "--font-serif",
+  subsets: ["latin"]
+})
+
+const head = Anton_SC({
+  weight: "400",
+  variable: "--font-head",
+  subsets: ["latin"]
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,9 +35,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${ChivoFont.className} ${DelaFont.className} antialiased`}
+        className={`${head.variable} ${serif.variable} ${sans.variable} antialiased`}
       >
-        <div className="min-h-screen bg-cyan-600 flex flex-col p-4 text-black font-[Chivo]">
+        <div className="min-h-screen bg-cbg flex flex-col p-4 text-black font-sans">
           {children}
         </div>
       </body>

@@ -80,15 +80,14 @@ export default function Home() {
               required
             />
             <select
-              aria-label="Select your level"
               name="level"
               id="level"
               className="border border-gray-300 rounded w-full px-3 py-2 font-sans"
               onChange={handleChange}
               value={formData.level}
-              defaultValue={""}
               required
             >
+              <option value={""} disabled>Choose Level</option>
               {languageLevels.map((level) => (
                 <option key={level.value} value={level.value}>
                   {level.label}
@@ -96,15 +95,14 @@ export default function Home() {
               ))}
             </select>
             <select
-              aria-label="Select your level"
               name="topic"
               id="topic"
               className="border border-gray-300 rounded px-3 py-2 font-sans"
               onChange={handleChange}
               value={formData.topic}
-              defaultValue={""}
               required
             >
+              <option value={""} disabled>Choose Topic</option>
               {englishTopics.map((topic) => (
                 <option key={topic} value={topic}>
                   {topic}

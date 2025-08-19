@@ -1,22 +1,17 @@
 @import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Dela+Gothic+One&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #122024;
+  --foreground: #203039;
+  --cta: #76ABAE;
 }
 
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-head: var(--font-head);
+  --color-cbg: var(--background);
+  --color-cfg: var(--foreground);
+  --color-cta: var(--cta);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: 'Chivo', 'Merriweather', 'PT Sans', sans-serif;
-}
